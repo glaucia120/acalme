@@ -1,0 +1,6 @@
+{
+  "name": "Acalme a Ansiedade - E-book",
+  "description": "Página de vendas oficial para o livro 'Acalme a Ansiedade' da psicóloga Glaucia Freitas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

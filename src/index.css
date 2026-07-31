@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #93C5FD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #60A5FA;
+}
+
