@@ -191,7 +191,7 @@ export const TESTIMONIALS: Testimonial[] = [
     city: "São Paulo, SP",
     highlight: "Não há nada de errado comigo",
     quote:
-      "Este livro chegou num momento em que eu já não sabia mais o que fazer com a ansiedade. Glaucia me ensinou que não há nada de errado comigo — e me deu ferramentas que realmente funcionam. Hoje, consigo respirar antes de entrar em pânico."
+      "Este livro chegou num momento em que eu já não sabia mais o que fazer com a ansiedade. A autora me ensinou que não há nada de errado comigo — e me deu ferramentas que realmente funcionam. Hoje, consigo respirar antes de entrar em pânico."
   },
   {
     id: "t-2",

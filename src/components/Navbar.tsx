@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckout, onOpenBreathingM
               Acalme a Ansiedade
             </span>
             <span className="text-[10px] uppercase tracking-wider text-[#475569] font-medium block mt-0.5">
-              Por Glaucia Freitas
+              Psicóloga • Especialista em TCC
             </span>
           </div>
         </a>

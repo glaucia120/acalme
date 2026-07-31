@@ -13,15 +13,15 @@ export const AuthorSection: React.FC = () => {
             {/* Author Avatar Column */}
             <div className="md:col-span-4 flex flex-col items-center text-center">
               <div className="relative mb-4">
-                <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-[#1E40AF] to-[#3B82F6] p-1 shadow-xl">
+                <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-tr from-[#1E40AF] to-[#3B82F6] p-1.5 shadow-xl">
                   <div className="w-full h-full rounded-full bg-[#EFF6FF] border-4 border-white overflow-hidden flex items-center justify-center relative">
-                    {/* Artistic silhouette / placeholder illustration representing Glaucia Freitas */}
-                    <div className="w-full h-full bg-[#DBEAFE] flex flex-col items-center justify-center text-[#1E40AF]">
-                      <span className="font-serif text-5xl font-bold">GF</span>
-                      <span className="text-[10px] uppercase tracking-widest mt-1 font-bold">
-                        Glaucia Freitas
-                      </span>
-                    </div>
+                    {/* Author photo / illustration */}
+                    <img
+                      src="https://i.ibb.co/QFN9Lss1/La-Silueta-del-Faro.png"
+                      alt="A Autora - Psicóloga Especialista em TCC"
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                 </div>
                 {/* Badge icon */}
@@ -52,7 +52,7 @@ export const AuthorSection: React.FC = () => {
               </h2>
 
               <p>
-                <strong className="text-[#0F172A]">Glaucia Freitas</strong> é psicóloga formada
+                <strong className="text-[#0F172A]">A autora</strong> é psicóloga formada
                 pela PUC-RS com especialização em Terapias Cognitivo-Comportamentais e Saúde
                 Mental. Há mais de uma década, atende pessoas que enfrentam a ansiedade em
                 suas diversas formas, tanto no consultório quanto através de grupos de apoio.
@@ -60,7 +60,7 @@ export const AuthorSection: React.FC = () => {
 
               <p>
                 Sua abordagem integra técnicas comprovadas da psicologia com práticas de
-                autocuidado e atenção plena, sempre com um olhar humano e acolhedor. Glaucia
+                autocuidado e atenção plena, sempre com um olhar humano e acolhedor. Ela
                 acredita que a <strong className="text-[#0F172A]">mudança genuína acontece
                 quando combinamos conhecimento, prática e autocompaixão</strong>.
               </p>

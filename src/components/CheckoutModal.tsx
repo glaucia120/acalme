@@ -128,7 +128,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                     E-book: Acalme a Ansiedade
                   </h4>
                   <p className="text-xs text-[#475569]">
-                    Por Glaucia Freitas (Psicóloga) • Arquivo PDF
+                    Guia Prático TCC • Arquivo PDF (Instantâneo)
                   </p>
                   <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#1D4ED8] bg-white px-2.5 py-0.5 rounded-full border border-[#BFDBFE]">
                     <Gift className="w-3 h-3" />
