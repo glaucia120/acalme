@@ -120,7 +120,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 <img
                   src="https://i.ibb.co/8nZRQ8xs/HBOOK003.jpg"
                   alt="Acalme a Ansiedade Capa"
-                  className="w-14 sm:w-16 h-auto rounded-lg shadow border border-[#DBEAFE] shrink-0"
+                  className="w-14 sm:w-16 h-auto shrink-0 mix-blend-multiply"
                   referrerPolicy="no-referrer"
                 />
                 <div className="space-y-1">

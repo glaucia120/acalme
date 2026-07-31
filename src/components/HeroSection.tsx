@@ -87,28 +87,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           {/* Right column: Book cover mockup with actual image provided by user */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[340px] sm:max-w-[370px]">
-              {/* Decorative blue aura shadow around book */}
-              <div className="absolute inset-0 bg-[#2563EB]/20 rounded-3xl blur-2xl transform rotate-3" />
+            <div className="relative w-full max-w-[320px] sm:max-w-[350px]">
+              {/* Soft circular ambient glow behind the book without any rectangular frame */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#3B82F6]/15 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-              {/* Book Cover Container */}
+              {/* Book Cover Container - Transparent without background or borders */}
               <div
                 onClick={onOpenCheckout}
-                className="relative rounded-2xl shadow-2xl overflow-hidden border border-[#CBD5E1] cursor-pointer group transform transition-all duration-500 hover:-translate-y-1.5 hover:shadow-3xl bg-white"
+                className="relative cursor-pointer group transform transition-all duration-500 hover:-translate-y-1.5"
               >
-                {/* Image of the Book Cover */}
+                {/* Image of the Book Cover - transparent background without frames */}
                 <img
                   src="https://i.ibb.co/8nZRQ8xs/HBOOK003.jpg"
                   alt="Livro Acalme a Ansiedade - Glaucia Freitas"
-                  className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-auto object-contain block group-hover:scale-[1.02] transition-transform duration-500 mix-blend-multiply"
                   referrerPolicy="no-referrer"
                 />
 
-                {/* Subtle shine overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/10 pointer-events-none" />
-
                 {/* Hover overlay button hint */}
-                <div className="absolute inset-0 bg-[#0F172A]/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30">
+                <div className="absolute inset-0 bg-[#0F172A]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 rounded-2xl">
                   <span className="bg-[#1E40AF] text-white px-6 py-3.5 rounded-full font-bold text-sm shadow-xl flex items-center gap-2 transform scale-95 group-hover:scale-100 transition-transform">
                     <Download className="w-4 h-4" />
                     BAIXAR E-BOOK • R$ 29,87

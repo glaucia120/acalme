@@ -21,48 +21,48 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
     <section id="oferta" className="py-20 bg-[#F8FAFC]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-16">
         {/* The Main Pricing & Offer Card */}
-        <div id="oferta-principal" className="bg-[#1E40AF] rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#2563EB]/40 rounded-full blur-3xl pointer-events-none" />
+        <div id="oferta-principal" className="bg-white rounded-3xl p-8 sm:p-14 text-[#0F172A] border-2 border-[#E2E8F0] shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#EFF6FF]/60 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-3xl mx-auto text-center space-y-8 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#DBEAFE]">
-              <Zap className="w-3.5 h-3.5 text-[#93C5FD]" />
+            <div className="inline-flex items-center gap-2 bg-[#EFF6FF] border border-[#BFDBFE] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#1D4ED8]">
+              <Zap className="w-3.5 h-3.5 text-[#2563EB]" />
               <span>Acesso Instantâneo em PDF</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#0F172A]">
               Tudo O Que Você Precisa Para Reencontrar Sua Tranquilidade
             </h2>
 
-            {/* Book Cover Preview within the offer block */}
+            {/* Book Cover Preview - transparent without frames, borders, or background */}
             <div className="flex justify-center my-4">
               <img
                 src="https://i.ibb.co/8nZRQ8xs/HBOOK003.jpg"
                 alt="Acalme a Ansiedade - E-book PDF"
-                className="w-48 sm:w-56 h-auto rounded-xl shadow-2xl border-2 border-white/20 transform hover:scale-105 transition-transform"
+                className="w-48 sm:w-56 h-auto transform hover:scale-105 transition-transform mix-blend-multiply"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/15 space-y-4 text-left">
-              <h3 className="font-serif font-bold text-lg sm:text-xl text-center border-b border-white/10 pb-4">
+            <div className="bg-[#F8FAFC] rounded-2xl p-6 sm:p-8 border border-[#E2E8F0] space-y-4 text-left">
+              <h3 className="font-serif font-bold text-lg sm:text-xl text-center border-b border-[#E2E8F0] pb-4 text-[#0F172A]">
                 O Que Está Incluído no Seu Acesso Hoje:
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-sm text-[#334155]">
                 <div className="flex items-center gap-3">
-                  <BookOpen className="w-5 h-5 text-[#93C5FD] shrink-0" />
+                  <BookOpen className="w-5 h-5 text-[#2563EB] shrink-0" />
                   <span>E-book Completo (11 Capítulos em PDF)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#93C5FD] shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2563EB] shrink-0" />
                   <span>Exercícios Práticos Passo a Passo</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-5 h-5 text-[#93C5FD] shrink-0" />
+                  <Award className="w-5 h-5 text-[#2563EB] shrink-0" />
                   <span>Metodologia Cognitivo-Comportamental</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#93C5FD] shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-[#2563EB] shrink-0" />
                   <span>Garantia de 7 Dias (Risco Zero)</span>
                 </div>
               </div>
@@ -70,16 +70,16 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
 
             {/* Price badge */}
             <div className="space-y-2">
-              <p className="text-xs uppercase tracking-widest text-[#BFDBFE] font-bold">
+              <p className="text-xs uppercase tracking-widest text-[#64748B] font-bold">
                 Valor Promocional Exclusivo
               </p>
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-sm line-through text-[#93C5FD]">R$ 67,00</span>
-                <span className="text-5xl sm:text-6xl font-bold font-serif text-white">
+                <span className="text-sm line-through text-[#64748B]">R$ 67,00</span>
+                <span className="text-5xl sm:text-6xl font-bold font-serif text-[#1E40AF]">
                   R$ 29,87
                 </span>
               </div>
-              <p className="text-xs text-[#BFDBFE]">
+              <p className="text-xs text-[#64748B]">
                 Pagamento único • Sem mensalidades • Acesso vitalício ao arquivo
               </p>
             </div>
@@ -90,16 +90,16 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
                 href="https://pay.kiwify.com.br/dcEUHQE"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC] text-[#1E40AF] px-10 py-5 rounded-full font-bold text-base sm:text-xl shadow-2xl hover:shadow-3xl transition-all duration-200 inline-flex items-center justify-center gap-3 group transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto bg-[#1E40AF] hover:bg-[#1E3A8A] text-white px-10 py-5 rounded-full font-bold text-base sm:text-xl shadow-xl hover:shadow-2xl transition-all duration-200 inline-flex items-center justify-center gap-3 group transform hover:-translate-y-0.5"
               >
                 <span>QUERO MEU LIVRO — R$ 29,87</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
-            <div className="flex items-center justify-center gap-4 text-xs text-[#DBEAFE] pt-2">
+            <div className="flex items-center justify-center gap-4 text-xs text-[#64748B] pt-2 font-medium">
               <span className="flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5" />
+                <Lock className="w-3.5 h-3.5 text-[#2563EB]" />
                 Pagamento 100% Seguro
               </span>
               <span>•</span>
