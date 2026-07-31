@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCheckout }) => {
               Pronto para Começar?
             </h4>
             <p className="text-xs text-[#94A3B8]">
-              Receba o E-book (PDF) + Bônus de 21 Dias de Exercícios com acesso instantâneo.
+              Receba o E-book (PDF) completo com acesso instantâneo.
             </p>
             <button
               onClick={onOpenCheckout}

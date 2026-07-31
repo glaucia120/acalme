@@ -96,33 +96,33 @@ export const BreathingModal: React.FC<BreathingModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-[#E2E8F0] relative flex flex-col">
+      <div className="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-xl border border-[#E2E8F0] relative flex flex-col">
         {/* Header */}
-        <div className="p-6 sm:p-7 border-b border-[#E2E8F0] flex items-center justify-between bg-[#F8FAFC]">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[#1E40AF] flex items-center justify-center">
-              <Sparkles className="w-4 h-4" />
+        <div className="px-5 py-4 border-b border-[#E2E8F0] flex items-center justify-between bg-[#F8FAFC]">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[#1E40AF] flex items-center justify-center">
+              <Sparkles className="w-3.5 h-3.5" />
             </div>
             <div>
-              <h3 className="font-serif font-bold text-lg text-[#0F172A]">
+              <h3 className="font-serif font-bold text-base text-[#0F172A]">
                 Pausa para Respirar
               </h3>
-              <p className="text-xs text-[#475569]">
-                Técnica 4-7-8 recomendada para acalmar o sistema nervoso
+              <p className="text-[11px] text-[#475569]">
+                Técnica 4-7-8 para acalmar a mente
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 rounded-full hover:bg-[#EFF6FF] text-[#64748B] hover:text-[#0F172A] flex items-center justify-center transition-colors"
+            className="w-8 h-8 rounded-full hover:bg-[#EFF6FF] text-[#64748B] hover:text-[#0F172A] flex items-center justify-center transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Breathing Circle Area */}
-        <div className="p-8 sm:p-10 flex flex-col items-center justify-center text-center space-y-6">
-          <div className="relative flex items-center justify-center w-56 h-56">
+        <div className="p-6 flex flex-col items-center justify-center text-center space-y-4">
+          <div className="relative flex items-center justify-center w-44 h-44 my-2">
             {/* Outer animated halo */}
             <div
               className={`absolute inset-0 rounded-full border-2 ${
@@ -134,29 +134,29 @@ export const BreathingModal: React.FC<BreathingModalProps> = ({
 
             {/* Inner circle */}
             <div
-              className={`w-44 h-44 rounded-full ${
+              className={`w-36 h-36 rounded-full ${
                 currentConfig.bgColor
               } border ${
                 currentConfig.borderColor
-              } flex flex-col items-center justify-center shadow-lg transition-all duration-1000 ${
+              } flex flex-col items-center justify-center shadow-md transition-all duration-1000 ${
                 isActive ? currentConfig.scale : "scale-100"
               }`}
             >
-              <span className={`text-4xl font-serif font-bold ${currentConfig.color}`}>
+              <span className={`text-3xl font-serif font-bold ${currentConfig.color}`}>
                 {timeLeft}
               </span>
-              <span className="text-xs uppercase tracking-widest font-bold text-[#475569] mt-1">
+              <span className="text-[11px] uppercase tracking-wider font-bold text-[#475569] mt-0.5">
                 {isActive ? phase : "4-7-8"}
               </span>
             </div>
           </div>
 
           {/* Phase Guidance text */}
-          <div className="space-y-1 min-h-[60px]">
-            <h4 className="font-serif text-xl sm:text-2xl font-bold text-[#0F172A]">
+          <div className="space-y-1 min-h-[44px]">
+            <h4 className="font-serif text-lg font-bold text-[#0F172A]">
               {isActive ? currentConfig.label : "Pronto para relaxar sua mente?"}
             </h4>
-            <p className="text-sm text-[#475569] max-w-sm">
+            <p className="text-xs text-[#475569] max-w-xs mx-auto">
               {isActive
                 ? currentConfig.sublabel
                 : "A respiração 4-7-8 ajuda a enviar um sinal de segurança para o seu cérebro."}
@@ -164,19 +164,19 @@ export const BreathingModal: React.FC<BreathingModalProps> = ({
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-3 pt-2">
+          <div className="flex items-center gap-2 pt-1">
             <button
               onClick={() => setIsActive(!isActive)}
-              className="bg-[#1E40AF] hover:bg-[#1E3A8A] text-white px-6 py-3 rounded-full font-semibold text-sm shadow hover:shadow-md transition-all flex items-center gap-2"
+              className="bg-[#1E40AF] hover:bg-[#1E3A8A] text-white px-5 py-2.5 rounded-full font-semibold text-xs shadow hover:shadow-md transition-all flex items-center gap-1.5"
             >
               {isActive ? (
                 <>
-                  <Pause className="w-4 h-4" />
+                  <Pause className="w-3.5 h-3.5" />
                   <span>Pausar</span>
                 </>
               ) : (
                 <>
-                  <Play className="w-4 h-4" />
+                  <Play className="w-3.5 h-3.5" />
                   <span>{cycleCount > 0 ? "Continuar" : "Iniciar Exercício"}</span>
                 </>
               )}
@@ -190,36 +190,35 @@ export const BreathingModal: React.FC<BreathingModalProps> = ({
                   setTimeLeft(4);
                   setCycleCount(0);
                 }}
-                className="bg-[#F8FAFC] hover:bg-[#EFF6FF] text-[#475569] px-4 py-3 rounded-full font-medium text-sm border border-[#E2E8F0] transition-colors flex items-center gap-1.5"
+                className="bg-[#F8FAFC] hover:bg-[#EFF6FF] text-[#475569] p-2.5 rounded-full font-medium text-xs border border-[#E2E8F0] transition-colors"
                 title="Reiniciar"
               >
-                <RotateCcw className="w-4 h-4" />
+                <RotateCcw className="w-3.5 h-3.5" />
               </button>
             )}
           </div>
 
           {cycleCount > 0 && (
-            <p className="text-xs text-[#2563EB] font-bold">
+            <p className="text-[11px] text-[#2563EB] font-bold">
               ✨ Ciclos completos: {cycleCount}
             </p>
           )}
         </div>
 
         {/* Footer conversion prompt */}
-        <div className="bg-[#EFF6FF] border-t border-[#DBEAFE] p-6 text-center space-y-3">
+        <div className="bg-[#EFF6FF] border-t border-[#DBEAFE] px-5 py-4 text-center space-y-2.5">
           <p className="text-xs font-semibold text-[#1E40AF]">
-            Gostou desta sensação de calma? O livro traz 11 capítulos práticos com ferramentas
-            como esta.
+            O e-book traz 11 capítulos com ferramentas práticas para sua rotina.
           </p>
           <button
             onClick={() => {
               onClose();
               onOpenCheckout();
             }}
-            className="w-full bg-[#1E40AF] hover:bg-[#1E3A8A] text-white py-3 px-6 rounded-full font-bold text-xs sm:text-sm shadow transition-all flex items-center justify-center gap-2"
+            className="w-full bg-[#1E40AF] hover:bg-[#1E3A8A] text-white py-2.5 px-4 rounded-full font-bold text-xs shadow transition-all flex items-center justify-center gap-1.5"
           >
-            <span>Baixar E-book Completo — R$ 29,87</span>
-            <ArrowRight className="w-4 h-4" />
+            <span>Baixar E-book — R$ 29,87</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>

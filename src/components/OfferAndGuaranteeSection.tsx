@@ -1,5 +1,4 @@
 import React from "react";
-import { BONUS_ITEM } from "../data/bookContent";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -19,58 +18,10 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
   onOpenCheckout
 }) => {
   return (
-    <section className="py-20 bg-[#F8FAFC]">
+    <section id="oferta" className="py-20 bg-[#F8FAFC]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-16">
-        {/* Bonus Showcase Box */}
-        <div className="bg-white rounded-3xl border border-[#DBEAFE] p-8 sm:p-12 shadow-md relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#EFF6FF] rounded-full -mr-20 -mt-20 blur-3xl pointer-events-none" />
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-            <div className="md:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 bg-[#EFF6FF] border border-[#BFDBFE] text-[#1D4ED8] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                <Gift className="w-4 h-4" />
-                <span>Bônus Especial • Incluído Gratuitamente</span>
-              </div>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F172A]">
-                {BONUS_ITEM.title}
-              </h3>
-              <p className="text-[#334155] text-base sm:text-lg leading-relaxed">
-                {BONUS_ITEM.description}
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                {BONUS_ITEM.features.map((ft, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-sm text-[#334155]">
-                    <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
-                    <span>{ft}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="pt-2 flex items-center gap-3 text-xs font-bold text-[#1D4ED8]">
-                <span className="line-through text-[#64748B]">Valor avulso: {BONUS_ITEM.value}</span>
-                <span className="bg-[#EFF6FF] px-3 py-1 rounded-full border border-[#BFDBFE]">
-                  GRÁTIS hoje com o e-book
-                </span>
-              </div>
-            </div>
-
-            <div className="md:col-span-4 flex justify-center">
-              <div className="bg-[#EFF6FF] border border-[#BFDBFE] rounded-2xl p-6 text-center space-y-3 shadow-inner w-full">
-                <div className="w-14 h-14 rounded-full bg-[#1E40AF] text-white flex items-center justify-center mx-auto font-bold text-xl shadow-md">
-                  +21
-                </div>
-                <h4 className="font-serif font-bold text-base text-[#0F172A]">
-                  Guia Prático em PDF
-                </h4>
-                <p className="text-xs text-[#475569]">
-                  21 dias de exercícios cognitivos breves para consolidar seus aprendizados.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* The Main Pricing & Offer Card */}
-        <div className="bg-[#1E40AF] rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+        <div id="oferta-principal" className="bg-[#1E40AF] rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#2563EB]/40 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-3xl mx-auto text-center space-y-8 relative z-10">
@@ -103,8 +54,8 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
                   <span>E-book Completo (11 Capítulos em PDF)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Gift className="w-5 h-5 text-[#93C5FD] shrink-0" />
-                  <span>Bônus: Guia de 21 Dias de Exercícios</span>
+                  <CheckCircle2 className="w-5 h-5 text-[#93C5FD] shrink-0" />
+                  <span>Exercícios Práticos Passo a Passo</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Award className="w-5 h-5 text-[#93C5FD] shrink-0" />
@@ -133,15 +84,17 @@ export const OfferAndGuaranteeSection: React.FC<OfferAndGuaranteeSectionProps> =
               </p>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Button - Principal payment link */}
             <div className="pt-2">
-              <button
-                onClick={onOpenCheckout}
+              <a
+                href="https://pay.kiwify.com.br/dcEUHQE"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-white hover:bg-[#F8FAFC] text-[#1E40AF] px-10 py-5 rounded-full font-bold text-base sm:text-xl shadow-2xl hover:shadow-3xl transition-all duration-200 inline-flex items-center justify-center gap-3 group transform hover:-translate-y-0.5"
               >
                 <span>QUERO MEU LIVRO — R$ 29,87</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
 
             <div className="flex items-center justify-center gap-4 text-xs text-[#DBEAFE] pt-2">

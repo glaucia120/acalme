@@ -60,7 +60,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 Finalizar Pedido Seguro
               </h3>
               <p className="text-xs text-[#94A3B8]">
-                Acesso imediato ao E-book PDF + Bônus Exclusivo de 21 Dias
+                Acesso imediato ao E-book PDF (compatível com todos os dispositivos)
               </p>
             </div>
           </div>
@@ -86,8 +86,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 Parabéns pelo seu novo recomeço, {fullName || "Leitor"}!
               </h4>
               <p className="text-[#475569] text-sm sm:text-base max-w-md mx-auto">
-                Enviamos o link para download de <strong className="text-[#0F172A]">Acalme a Ansiedade (PDF)</strong> e o seu
-                <strong className="text-[#0F172A]"> Guia Bônus de 21 Dias</strong> para o e-mail:
+                Enviamos o link para download de <strong className="text-[#0F172A]">Acalme a Ansiedade (PDF)</strong> para o e-mail:
                 <br />
                 <span className="font-bold text-[#0F172A] underline">{email || "seu email cadastrado"}</span>
               </p>

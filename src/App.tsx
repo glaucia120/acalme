@@ -18,15 +18,19 @@ import { ConclusionSection } from "./components/ConclusionSection";
 import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
 import { BreathingModal } from "./components/BreathingModal";
-import { CheckoutModal } from "./components/CheckoutModal";
 import { ArrowRight, Wind } from "lucide-react";
 
 export default function App() {
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isBreathingModalOpen, setIsBreathingModalOpen] = useState(false);
 
-  const openCheckout = () => setIsCheckoutOpen(true);
-  const closeCheckout = () => setIsCheckoutOpen(false);
+  const scrollToMainOffer = () => {
+    const element =
+      document.getElementById("oferta-principal") ||
+      document.getElementById("oferta");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
 
   const openBreathingModal = () => setIsBreathingModalOpen(true);
   const closeBreathingModal = () => setIsBreathingModalOpen(false);
@@ -35,7 +39,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0F172A]">
       {/* Navigation Header - Focused strictly on conversion (no menu links) */}
       <Navbar
-        onOpenCheckout={openCheckout}
+        onOpenCheckout={scrollToMainOffer}
         onOpenBreathingModal={openBreathingModal}
       />
 
@@ -43,7 +47,7 @@ export default function App() {
       <main className="flex-1">
         {/* Hero Banner with real Book Cover & Value Proposition */}
         <HeroSection
-          onOpenCheckout={openCheckout}
+          onOpenCheckout={scrollToMainOffer}
           onOpenBreathingModal={openBreathingModal}
         />
 
@@ -69,17 +73,17 @@ export default function App() {
         <ObjectionsSection />
 
         {/* Offer, Bonus & Guarantee: "O QUE VOCÊ ESTÁ ESPERANDO? QUERO MEU LIVRO - R$ 29,87" */}
-        <OfferAndGuaranteeSection onOpenCheckout={openCheckout} />
+        <OfferAndGuaranteeSection onOpenCheckout={scrollToMainOffer} />
 
         {/* Inspiring Conclusion: "O RECOMEÇO É AGORA" */}
-        <ConclusionSection onOpenCheckout={openCheckout} />
+        <ConclusionSection onOpenCheckout={scrollToMainOffer} />
 
         {/* FAQ Section */}
         <FaqSection />
       </main>
 
       {/* Footer - No blog navigation links */}
-      <Footer onOpenCheckout={openCheckout} />
+      <Footer onOpenCheckout={scrollToMainOffer} />
 
       {/* Sticky Bottom Bar for fast conversion on any scroll position */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E2E8F0] py-3 px-4 shadow-lg flex items-center justify-between sm:justify-center sm:gap-8">
@@ -89,7 +93,7 @@ export default function App() {
           </div>
           <div>
             <p className="text-xs font-bold text-[#0F172A]">
-              E-book Acalme a Ansiedade + Bônus 21 Dias
+              E-book Acalme a Ansiedade (PDF)
             </p>
             <p className="text-[11px] text-[#475569]">
               Garantia incondicional de 7 dias ou seu dinheiro de volta
@@ -107,7 +111,7 @@ export default function App() {
           </button>
 
           <button
-            onClick={openCheckout}
+            onClick={scrollToMainOffer}
             className="bg-[#1E40AF] hover:bg-[#1E3A8A] text-white px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold shadow hover:shadow-md transition-all flex items-center gap-2"
           >
             <span>Quero Meu Livro — R$ 29,87</span>
@@ -120,12 +124,7 @@ export default function App() {
       <BreathingModal
         isOpen={isBreathingModalOpen}
         onClose={closeBreathingModal}
-        onOpenCheckout={openCheckout}
-      />
-
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={closeCheckout}
+        onOpenCheckout={scrollToMainOffer}
       />
     </div>
   );

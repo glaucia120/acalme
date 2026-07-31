@@ -76,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
-                <span>Bônus: Guia 21 Dias Grátis</span>
+                <span>Metodologia baseada em TCC</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#2563EB] shrink-0" />
@@ -116,17 +116,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
               </div>
 
-              {/* Bonus tag sticker below mockup */}
+              {/* Delivery info sticker below mockup */}
               <div className="mt-5 bg-white border border-[#CBD5E1] rounded-2xl p-4 flex items-center gap-3.5 shadow-md">
-                <div className="w-11 h-11 rounded-xl bg-[#1E40AF] text-white flex items-center justify-center shrink-0 font-bold text-sm shadow-inner">
-                  +21
+                <div className="w-11 h-11 rounded-xl bg-[#1E40AF] text-white flex items-center justify-center shrink-0 font-bold text-xs shadow-inner">
+                  PDF
                 </div>
                 <div>
                   <p className="text-xs font-bold text-[#0F172A] uppercase tracking-wide">
-                    Bônus Exclusivo Incluído Hoje
+                    Acesso Instantâneo por E-mail
                   </p>
                   <p className="text-xs text-[#475569] leading-relaxed">
-                    Guia Prático com 21 dias de exercícios diários sem custo adicional.
+                    Formato PDF universal compatível com celular, tablet, leitor digital e computador.
                   </p>
                 </div>
               </div>
