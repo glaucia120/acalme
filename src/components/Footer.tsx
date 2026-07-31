@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, ShieldCheck, Heart } from "lucide-react";
+import { ShieldCheck, Heart } from "lucide-react";
 
 interface FooterProps {
   onOpenCheckout: () => void;
@@ -15,9 +15,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenCheckout }) => {
           {/* Logo and brief info */}
           <div className="md:col-span-8 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-[#93C5FD]">
-                <BookOpen className="w-5 h-5" />
-              </div>
+              <img
+                src="https://i.ibb.co/spzstGg5/io-images-a-book-1157658-1920.png"
+                alt="Logo Acalme a Ansiedade"
+                className="w-10 h-10 object-contain rounded-full bg-white p-1 border border-white/20 shrink-0"
+                referrerPolicy="no-referrer"
+              />
               <span className="font-serif font-bold text-xl tracking-tight">
                 Acalme a Ansiedade
               </span>

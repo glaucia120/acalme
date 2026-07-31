@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BookOpen, ShieldCheck, Wind } from "lucide-react";
+import { ShieldCheck, Wind } from "lucide-react";
 
 interface NavbarProps {
   onOpenCheckout: () => void;
@@ -30,9 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCheckout, onOpenBreathingM
           href="#top"
           className="flex items-center gap-2.5 text-[#0F172A] hover:opacity-90 transition-opacity"
         >
-          <div className="w-9 h-9 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#1D4ED8]">
-            <BookOpen className="w-5 h-5" />
-          </div>
+          <img
+            src="https://i.ibb.co/spzstGg5/io-images-a-book-1157658-1920.png"
+            alt="Logo Acalme a Ansiedade"
+            className="w-9 h-9 object-contain rounded-full bg-white p-1 border border-[#BFDBFE] shadow-xs shrink-0"
+            referrerPolicy="no-referrer"
+          />
           <div>
             <span className="font-serif font-bold text-lg tracking-tight block leading-none text-[#0F172A]">
               Acalme a Ansiedade
